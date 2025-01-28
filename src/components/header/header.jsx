@@ -11,8 +11,8 @@ import "./header.css"
     return (
         <>
             <header>
-                <button onClick={() => props.setActiveElem({ type: 'setTable' })}
-                    className={(props.activeElem.type.name === 'Table') ? "glow-button-active" : "glow-button"}> А ა
+                <button onClick={() => props.setActiveElem({ type: 'table' })}
+                    className={(props.activeElem === 'table') ? "glow-button-active" : "glow-button"}> А ა
                 </button>
                 <div className='header-block'>
                     <div className='header-block__title'>очки</div>
@@ -26,8 +26,8 @@ import "./header.css"
                     <div className='header-block__title'>за ход</div>
                     <div className='header-block__value'>+{(streak > 6) ? 3 : (streak > 3) ? 2 : 1}</div>
                 </div>
-                <button onClick={() => props.setActiveElem({ type: 'setInstruction' })}
-                    className={(props.activeElem.type.name === 'Istruction') ? "glow-button-active" : "glow-button"}> ?
+                <button onClick={() => props.setActiveElem({ type: 'instruction' })}
+                    className={(props.activeElem === 'instruction') ? "glow-button-active" : "glow-button"}> ?
                 </button>
             </header>
             <div className='header-line'></div>
