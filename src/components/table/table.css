@@ -1,0 +1,45 @@
+.row {
+    display: flex;
+    color: #ccff00;
+    width: 500px;
+    justify-content: space-between;
+    font-size: 40px;
+}
+.table {
+    
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+@media (max-width: 1200px) {
+    .row {
+ 
+        width: 300px;
+        
+        font-size: 30px;
+    }
+
+}
+.line-element {
+ width: 15%;
+}
+.table {
+    overflow-y: scroll;
+    max-height: 75vh;
+ }
+ .table::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .table::-webkit-scrollbar-track {
+    
+    -webkit-box-shadow: 0 0 10px 0 #ccff00 , 0 0 10px 4px #ccff00;
+    background-color: #f9f9fd;
+    border-radius: 10px;
+  }
+  
+  .table::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #000, #ccff00);
+  }

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+
+
+.app {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: column;
+}
+
+ a {
+    color: blueviolet;
+ }
