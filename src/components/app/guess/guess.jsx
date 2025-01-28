@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
-import ReactDOM from 'react-dom/client';
 import "./guess.css"
-import LetterCard from '../letter-card';
-import { Alphabet } from "../app/app";
+import LetterCard from '../common/letterCard/letterCard.jsx';
+import { Alphabet } from "../app.jsx";
 
 
 

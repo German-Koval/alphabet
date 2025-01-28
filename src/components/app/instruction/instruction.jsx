@@ -1,5 +1,5 @@
 import React from 'react';
-import LetterCard from '../letter-card';
+import LetterCard from '../common/letterCard/letterCard.jsx';
 import './instruction.css';
 export default function Istruction() {
     return (

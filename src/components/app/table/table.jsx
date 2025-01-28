@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import ReactDOM from 'react-dom/client';
 import './table.css'
-import { Alphabet } from "../app/app";
+import { Alphabet } from "../app.jsx";
 
 export default function Table() {
 

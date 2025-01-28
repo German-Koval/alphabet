@@ -1,11 +1,9 @@
 import React, { useReducer, createContext } from 'react';
-import ReactDOM from 'react-dom/client';
-import Table from '../table';
-import "./app.css"
-import Guess from '../guess';
-import Instruction from '../instructions';
-import langAlphData from '../../data/alphabets'
-import Header from '../header';
+import Table from './table/table.jsx'
+import Guess from './guess/guess.jsx';
+import Instruction from './instruction/instruction.jsx';
+import langAlphData from '../../data/alphabets.jsx'
+import Header from './header/header.jsx';
 const Alphabet = createContext()
 
 function App() {
