@@ -1,5 +1,5 @@
 import React from 'react';
-import "./header.css"
+import "./header.css";
 
 
 
@@ -10,9 +10,7 @@ import "./header.css"
     return (
         <>
             <header>
-                <button onClick={() => props.setActiveElem({ type: 'table' })}
-                    className={(props.activeElem === 'table') ? "glow-button-active" : "glow-button"}> А ა
-                </button>
+
                 <div className='header-block'>
                     <div className='header-block__title'>очки</div>
                     <div className='header-block__value'>{total}</div>
@@ -25,9 +23,17 @@ import "./header.css"
                     <div className='header-block__title'>за ход</div>
                     <div className='header-block__value'>+{(streak > 6) ? 3 : (streak > 3) ? 2 : 1}</div>
                 </div>
+                <div  className='button-container'>
+                <button onClick={() => props.setActiveElem({ type: 'guessGame' })}
+                    className={(props.activeElem === 'guessGame') ? "glow-button-active icon" : "glow-button icon"}> 
+                </button>
+                <button onClick={() => props.setActiveElem({ type: 'table' })}
+                    className={(props.activeElem === 'table') ? "glow-button-active" : "glow-button"}> А ა
+                </button>
                 <button onClick={() => props.setActiveElem({ type: 'instruction' })}
                     className={(props.activeElem === 'instruction') ? "glow-button-active" : "glow-button"}> ?
                 </button>
+                </div>
             </header>
             <div className='header-line'></div>
         </>

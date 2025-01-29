@@ -6,10 +6,12 @@
     font-size: 40px;
 }
 .table {
-    
+    width: 80vw;
+    max-width: 800px;
     margin-top: 50px;
     margin-right: 20px;
     margin-left: 20px;
+    
 
 }
 @media (max-width: 1200px) {
@@ -27,6 +29,8 @@
 .table {
     overflow-y: scroll;
     max-height: 75vh;
+    margin-right: auto;
+    margin-left: auto;
  }
  .table::-webkit-scrollbar {
     width: 10px;
@@ -34,7 +38,7 @@
   
   .table::-webkit-scrollbar-track {
     
-    -webkit-box-shadow: 0 0 10px 0 #ccff00 , 0 0 10px 4px #ccff00;
+    -webkit-box-shadow: 0 0 10px 4px #ccff00;
     background-color: #f9f9fd;
     border-radius: 10px;
   }

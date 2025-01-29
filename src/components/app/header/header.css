@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+@font-face {
+  font-family: "iconFont";
+  src:
+    url('../../../../fonts/iconFont/icomoon.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 button {
     padding: 0;
@@ -26,25 +34,31 @@ header {
     background-color: #ccff00;
     box-shadow: 0 0 10px 0 #ccff00 inset, 0 0 10px 4px #ccff00;
  }
-
+ .button-container {
+  display: flex;
+  flex-direction: row;
+  
+ }
  .glow-button {
     text-decoration: none;
-    display: inline-block;
-    padding: 2px 5px;
+    display: block;
+    padding: 0px 5px;
     box-sizing: border-box;
-    height: 100%;
+
+    min-height: 60px;
     box-shadow: 0 0 40px 40px #ccff00 inset, 0 0 0 0 #ccff00;
     letter-spacing: 2px;
     color: black;
     transition: .15s ease-in-out;
     font-size: 35px;
+    
   }
   .glow-button-active {
     text-decoration: none;
     display: inline-block;
     padding: 2px 5px;
     box-sizing: border-box;
-    height: 100%;
+    
     letter-spacing: 2px;
     transition: .15s ease-in-out;
     font-size: 35px;
@@ -69,6 +83,11 @@ header {
     min-width: 100px;
   }
   
+  @media (max-width: 1200px) {
+    .glow-button {
+      font-size: 20px;
+    }
+  }
   @media (max-width: 550px) {
     .header-block__value {
         min-width: 50px;
@@ -78,4 +97,7 @@ header {
         min-width: 50px;
         font-size: 10px;
       }
+}
+.icon {
+  font-family: "iconFont"
 }

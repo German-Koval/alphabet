@@ -4,6 +4,7 @@ import Guess from './guess/guess.jsx';
 import Instruction from './instruction/instruction.jsx';
 import langAlphData from '../../data/alphabets.jsx'
 import Header from './header/header.jsx';
+import './app.css'
 const Alphabet = createContext()
 
 function App() {
@@ -55,8 +56,10 @@ function App() {
                return 'instruction'
             }
          }
+         case 'guessGame': {
+            return 'guessGame'
       }
-   }
+   }}
 
 
 
