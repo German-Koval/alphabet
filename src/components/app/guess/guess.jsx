@@ -8,7 +8,7 @@ import { Alphabet } from "../app.jsx";
 export default function Guess(props) {
     const langAlphData = useContext(Alphabet)
     const [idData, setIdData] = useState(() => createIdData()) //array of possible langAlphData id values 
-    const [letterID, setLetterID] = useState(null) 
+    const [letterID, setLetterID] = useState(null)
 
 
     const [rightLetter, setRightLetter] = useState(null)
@@ -25,9 +25,9 @@ export default function Guess(props) {
         const newIdData = []
         for (let i = 0; i < langAlphData.length; i++) {
             newIdData.push(i)
-           
+
         }
-       
+
         return newIdData
     }
 
@@ -44,7 +44,7 @@ export default function Guess(props) {
         setWrongLetter1(wrongVars[0])
         setWrongLetter2(wrongVars[1])
         setRandomKey(Math.random())
-        props.setPoints({type: 'restart'})
+        props.setPoints({ type: 'restart' })
         setIdData(idData)
         setToBeGone(false)
         setRightLetter(rightLetter)
@@ -91,12 +91,12 @@ export default function Guess(props) {
     }
 
     function wrongAnsw() {
-        props.setPoints({type:'decrease'})
+        props.setPoints({ type: 'decrease' })
     }
 
     function rightAnsw() {
-       
-        props.setPoints({type:'increase'})
+
+        props.setPoints({ type: 'increase' })
         setRandomKey(Math.random())
         nextLetter()
     }
@@ -120,7 +120,7 @@ export default function Guess(props) {
     }
     const varRight = langAlphData[idData[letterID]]
     const varRightClone = (prevLetter === null) ? undefined : prevLetter.langSym
-    
+
 
     return (
         <div className='guess-container'>

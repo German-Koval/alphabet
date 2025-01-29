@@ -1,103 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+
 @font-face {
   font-family: "iconFont";
   src:
     url('../../../../fonts/iconFont/icomoon.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 
 button {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
 }
-header {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #ccff00;
-    font-family: "Stalinist One", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
 
- }
- .header-line {
-    width: 100%;
-    height: 1px;
-    background-color: #ccff00;
-    box-shadow: 0 0 10px 0 #ccff00 inset, 0 0 10px 4px #ccff00;
- }
- .button-container {
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ccff00;
+  font-family: "Stalinist One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+
+}
+
+.header-line {
+  width: 100%;
+  height: 1px;
+  background-color: #ccff00;
+  box-shadow: 0 0 10px 0 #ccff00 inset, 0 0 10px 4px #ccff00;
+}
+
+.button-container {
   display: flex;
   flex-direction: row;
-  
- }
- .glow-button {
-    text-decoration: none;
-    display: block;
-    padding: 0px 5px;
-    box-sizing: border-box;
 
-    min-height: 60px;
-    box-shadow: 0 0 40px 40px #ccff00 inset, 0 0 0 0 #ccff00;
-    letter-spacing: 2px;
-    color: black;
-    transition: .15s ease-in-out;
-    font-size: 35px;
-    
-  }
-  .glow-button-active {
-    text-decoration: none;
-    display: inline-block;
-    padding: 2px 5px;
-    box-sizing: border-box;
-    
-    letter-spacing: 2px;
-    transition: .15s ease-in-out;
-    font-size: 35px;
-    box-shadow: 0 0 10px 0 #ccff00 inset, 0 0 10px 4px #ccff00;
-    background-color: rgb(123, 92, 12);
-    color: #ccff00;
-  }
-  .glow-button:hover {
-    box-shadow: 0 0 10px 0 #ccff00 inset, 0 0 10px 4px #ccff00;
-    color: #ccff00;
-  }
-  .header-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 300px;
-    flex-wrap: wrap;
-  }
-
-
-  .header-block__value {
-    min-width: 100px;
-  }
-  
-  @media (max-width: 1200px) {
-    .glow-button {
-      font-size: 20px;
-    }
-  }
-  @media (max-width: 550px) {
-    .header-block__value {
-        min-width: 50px;
-        font-size: 10px;
-      }
-      .header-block__title {
-        min-width: 50px;
-        font-size: 10px;
-      }
 }
+
+.glow-button {
+  text-decoration: none;
+  display: block;
+  padding: 0px 10px;
+  min-height: 60px;
+  box-shadow: 0 0 40px 40px #ccff00 inset, 0 0 0 0 #ccff00;
+  color: black;
+  transition: .15s ease-in-out;
+  font-size: 35px;
+
+}
+
+.glow-button-active {
+  transition: .15s ease-in-out;
+  text-decoration: none;
+  display: block;
+  padding: 0px 10px;
+  box-shadow: 0 0 10px 0 #ccff00 inset, 0 0 10px 4px #ccff00;
+  background-color: rgb(123, 92, 12);
+  color: #ccff00;
+  font-size: 35px;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 10px 0 #ccff00 inset, 0 0 10px 4px #ccff00;
+  color: #ccff00;
+}
+
+.header-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 300px;
+  flex-wrap: wrap;
+}
+
+
+.header-block__value {
+  min-width: 100px;
+}
+
+@media (max-width: 1200px) {
+  .glow-button {
+    font-size: 20px;
+  }
+
+  .glow-button-active {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .header-block__value {
+    min-width: 50px;
+    font-size: 10px;
+  }
+
+  .header-block__title {
+    min-width: 50px;
+    font-size: 10px;
+  }
+}
+
 .icon {
-  font-family: "iconFont"
+  font-family: "iconFont";
+  padding: 0 10px
 }

@@ -58,8 +58,9 @@ function App() {
          }
          case 'guessGame': {
             return 'guessGame'
+         }
       }
-   }}
+   }
 
 
 

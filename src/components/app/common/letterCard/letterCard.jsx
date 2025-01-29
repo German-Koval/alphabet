@@ -14,7 +14,7 @@ export default function LetterCard(props) {
     function pronunSound(event) {
         event.stopPropagation()
         const { letter } = props
-        const sound = new Audio(`/audio/${letter.soundSrcId}_.mp3`)
+        const sound = new Audio(`/alphabet/audio/${letter.soundSrcId}_.mp3`)
         sound.autoplay = false
         sound.play()
     }

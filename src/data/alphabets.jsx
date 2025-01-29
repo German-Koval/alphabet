@@ -35,8 +35,5 @@ const langAlphData =
 
 
 
-//let a ='ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄՅՆՇՈՉՊՋՌՍՎՏՐՑՒՓՔՕՖ'
-//a.split('')
-//console.log(a.split(''))
 
 export default langAlphData
