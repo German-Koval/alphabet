@@ -10,10 +10,10 @@
   width: 80vw;
   max-width: 800px;
   margin-top: 50px;
-  margin-right: 20px;
-  margin-left: 20px;
-
-
+  overflow-y: scroll;
+  max-height: 75vh;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (max-width: 1200px) {
@@ -25,17 +25,20 @@
   }
 
 }
+@media (max-width: 900px) {
+  .table {
+    overflow: auto;
+    max-height:max-content;
+    width:auto;
+    padding: 20px;
+  }
+
+}
 
 .line-element {
   width: 15%;
 }
 
-.table {
-  overflow-y: scroll;
-  max-height: 75vh;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 .table::-webkit-scrollbar {
   width: 10px;

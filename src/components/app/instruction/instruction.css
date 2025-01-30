@@ -5,7 +5,8 @@
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
-    
+    overflow-y: scroll;
+    max-height: 75vh;
 }
 
 
@@ -15,10 +16,7 @@
     }
 }
 
-.instruction {
-    overflow-y: scroll;
-    max-height: 75vh;
- }
+
  .instruction::-webkit-scrollbar {
     width: 10px;
   }
@@ -36,4 +34,12 @@
   }
 
 
+  @media (max-width: 900px) {
+    .instruction {
+      overflow: auto;
+      max-height:max-content;
+      width:auto;
+      padding: 20px;
+    }
   
+  }

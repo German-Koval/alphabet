@@ -25,28 +25,13 @@
 
 }
 
-.letter-card:hover {
-  box-shadow: 0 0 10px 0 #ccff00 inset, 0 0 10px 4px #ccff00;
-  transition: .15s ease-in-out;
-  color: #ccff00;
-  background-color: black;
-
-}
-
-@media (max-width: 900px) {
-  .letter-card {
-    width: 100px;
-    height: 100px;
-    padding: 15px;
-  }
-
-  .rus-sym {
-    font-size: 30px;
-  }
 
 
 
-}
+
+
+
+
 
 .letter-card-isClicked {
   background-color: rgb(218, 32, 85);
@@ -55,16 +40,27 @@
 
 }
 
-.letter-card-isClicked:hover {
-  box-shadow: 0 0 10px 0 rgb(218, 32, 85) inset, 0 0 10px 4px rgb(218, 32, 85);
-  transition: .15s ease-in-out;
-  color: rgb(218, 32, 85);
-  background-color: black;
-}
+
 
 .letter-toBeGone {
   animation: flip-out-hor-bottom 0.45s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
+}
+
+@media (min-width: 900px) {
+  .letter-card-isClicked:hover {
+    box-shadow: 0 0 10px 0 rgb(218, 32, 85) inset, 0 0 10px 4px rgb(218, 32, 85);
+    transition: .15s ease-in-out;
+    color: rgb(218, 32, 85);
+    background-color: black;
+  }
+  .letter-card:hover {
+    box-shadow: 0 0 10px 0 #ccff00 inset, 0 0 10px 4px #ccff00;
+    transition: .15s ease-in-out;
+    color: #ccff00;
+    background-color: black;
+  
+  }
 }
 
 @keyframes flip-out-hor-bottom {
@@ -115,6 +111,18 @@
 .extra-info-container {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .letter-card {
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+  }
+
+  .rus-sym {
+    font-size: 30px;
+  }
 }
 
 @keyframes tilt-in-bottom-1 {

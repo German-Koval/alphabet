@@ -5,6 +5,7 @@ import Instruction from './instruction/instruction.jsx';
 import langAlphData from '../../data/alphabets.jsx'
 import Header from './header/header.jsx';
 import './app.css'
+import { Route, Routes, Link } from 'react-router';
 const Alphabet = createContext()
 
 function App() {
@@ -36,47 +37,20 @@ function App() {
 
 
 
-   const [activeElem, setActiveElem] = useReducer(ElemReducer, 'guessGame')
 
 
-
-   function ElemReducer(activeElem, action) {
-      switch (action.type) {
-         case 'table': {
-            if (activeElem === 'table') {
-               return 'guessGame'
-            } else {
-               return 'table'
-            }
-         }
-         case 'instruction': {
-            if (activeElem === 'instruction') {
-               return 'guessGame'
-            } else {
-               return 'instruction'
-            }
-         }
-         case 'guessGame': {
-            return 'guessGame'
-         }
-      }
-   }
-
-
-
-   function item() {
-      switch (activeElem) {
-         case 'table': return <Table className="activeElem-container" />;
-         case 'instruction': return <Instruction />;
-         case 'guessGame': return <Guess className="guess-card" setPoints={setPoints} />
-      }
-   }
 
    return (
       <div className='app'>
-         <Header setActiveElem={setActiveElem} activeElem={activeElem} points={points} />
+         <Header points={points} />
          <Alphabet.Provider value={langAlphData}>
-            {item()}
+            <Routes>
+               <Route path="*" element={<Guess className="guess-card" setPoints={setPoints} />}></Route>
+               <Route path='example' element={<Table className="activeElem-container" />} />
+               <Route path='instruction' element={<Instruction />} />
+               <Route path='game' element={<Guess className="guess-card" setPoints={setPoints} />} />
+               <Route index element={<Guess className="guess-card" setPoints={setPoints} />} />
+            </Routes>
          </Alphabet.Provider>
       </div>
    )

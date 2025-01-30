@@ -3,7 +3,7 @@
 @font-face {
   font-family: "iconFont";
   src:
-    url('../../../../fonts/iconFont/icomoon.ttf');
+    url('../../../fonts/iconFont/icomoon.ttf');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,6 +15,12 @@ button {
   font: inherit;
   color: inherit;
   background-color: transparent;
+}
+.button-border {
+ width: 1px;
+
+ background-color: black;
+ box-shadow: 0 0 10px 0 #000 , 0 0 10px 4px #000;
 }
 
 header {
@@ -28,7 +34,7 @@ header {
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
-
+  
 }
 
 .header-line {
@@ -48,7 +54,7 @@ header {
   text-decoration: none;
   display: block;
   padding: 0px 10px;
-  min-height: 60px;
+  
   box-shadow: 0 0 40px 40px #ccff00 inset, 0 0 0 0 #ccff00;
   color: black;
   transition: .15s ease-in-out;
@@ -78,6 +84,7 @@ header {
   justify-content: space-evenly;
   width: 300px;
   flex-wrap: wrap;
+  padding: 0px 5px;
 }
 
 
@@ -86,28 +93,52 @@ header {
 }
 
 @media (max-width: 1200px) {
-  .glow-button {
-    font-size: 20px;
+ 
+  .header-block {
+    flex-direction: column;
   }
-
-  .glow-button-active {
-    font-size: 20px;
+  .button-container {
+    width: 100%;
+  }
+  .glow-button {
+    width: 33%;
+    text-align: center;
+  }
+  .glow-button-active { 
+    width: 33%;
+    text-align: center;
   }
 }
 
-@media (max-width: 550px) {
+
+
+.icon {
+  font-family: "iconFont";
+  padding: 10px;
+  font-size: 40px;
+}
+
+.alphabet {
+  min-width: 70px;
+}
+
+
+@media (max-width: 660px) {
   .header-block__value {
     min-width: 50px;
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .header-block__title {
     min-width: 50px;
-    font-size: 10px;
+    font-size: 15px;
   }
-}
+  .header-block {
+    width:auto;
+  }
+  header {
+     flex-wrap: wrap;
+     height: auto
+  };
 
-.icon {
-  font-family: "iconFont";
-  padding: 0 10px
 }
